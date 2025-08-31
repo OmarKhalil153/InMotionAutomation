@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [InMotion Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <test thread-count="5" name="InMotion Tests(failed)" verbose="0">
+    <classes>
+      <class name="tests.InMotionE2ETest">
+        <methods>
+          <include name="addHostingPlanTest"/>
+          <include name="invalidDomainSearchTest"/>
+          <include name="openWebsiteTest"/>
+          <include name="updateHostingPlanTest"/>
+          <include name="cartPersistenceAfterRefresh"/>
+          <include name="removeDomainFromCart"/>
+          <include name="searchDomainTest"/>
+          <include name="verifyDomainInCart"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- tests.InMotionE2ETest -->
+    </classes>
+  </test> <!-- InMotion Tests(failed) -->
+</suite> <!-- Failed suite [InMotion Suite] -->

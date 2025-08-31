@@ -1,0 +1,5 @@
+# Created at 2025-08-30T11:02:40.094
+Boot Manifest-JAR contains absolute paths in classpath 'D:\Testing\Projects\Automation\inmotion-automation\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+'other' has different root
+
