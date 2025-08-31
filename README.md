@@ -42,7 +42,7 @@ testng.xml                # TestNG suite configuration
 pom.xml                   # Maven dependencies & build configuration
 
 ## 📝 Notes
-- No production logic was changed; extensive inline comments have been added for clarity.
+- Extensive inline comments have been added for clarity.
 - Tests follow TestNG annotations (@BeforeClass, @Test, @AfterClass) to structure execution.
 - This project can be extended with CI/CD pipelines for automated runs.
 
