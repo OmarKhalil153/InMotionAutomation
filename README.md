@@ -1,49 +1,49 @@
-# InMotion Automation (Updated with Allure)
+# 🚀 InMotion Automation Testing Suite
 
-This project uses **Selenium WebDriver (Java) + TestNG + Maven** to validate key flows on the InMotion Hosting website.  
-It now includes **Allure Reports** with automatic attachment of your **existing screenshots** saved under `screenshots/`.
+This project provides end-to-end UI automation tests for the InMotion Hosting website.  
+It is built using Selenium WebDriver (Java) + TestNG + Maven and follows a maintainable Page Object Model (POM) design.
 
-## Requirements
+## 📋 Features
+- Automated validation of key flows on InMotion Hosting
+- Page Object Model (POM) for clean, reusable code
+- TestNG test framework for execution and reporting
+- Screenshots captured during test execution
+- Easy integration with CI/CD pipelines
+
+## 🛠️ Tech Stack
+- Language: Java
+- Build Tool: Maven
+- Test Framework: TestNG
+- Automation Library: Selenium WebDriver
+- Browser: Google Chrome (via WebDriverManager)
+
+## ⚙️ Setup & Requirements
+Make sure you have the following installed:
 - JDK 11+
 - Maven 3.8+
-- Google Chrome + ChromeDriver (managed by WebDriverManager)
+- Google Chrome
 
-## How to Run
-```bash
+Maven will automatically download dependencies (e.g., WebDriverManager).
+
+## ▶️ Running the Tests
+Run the following command in the project root:
+
 mvn clean test
-```
-This will execute the TestNG suite from `testng.xml`. Screenshots captured by your tests are saved into `./screenshots`.
 
-## Allure Report (auto-open)
-After tests complete, the **Allure report opens automatically** (via `allure-maven` goal `serve`).  
-If you prefer manual steps:
-```bash
-# Generate the report
-mvn allure:report
-# Or serve the report locally
-mvn allure:serve
-```
-Reports are based on files in `target/allure-results`.
+This will execute the TestNG suite defined in testng.xml.  
+Screenshots are automatically captured and saved under the ./screenshots/ directory.
 
-## Screenshot Attachments
-- Your tests already call `takeScreenshot("...")` and save PNGs in `screenshots/`.
-- The custom **`AllureListener`** attaches any screenshots created **during each test’s run window** (and also files that include the method name) to the Allure test.
-- Attachments are added for **passed**, **failed**, and **skipped** tests.
-
-## Project Structure
-```
+## 📂 Project Structure
 src/
-  main/java/pages/        # Page Objects and verification helpers
-  test/java/com/inmotion  # Base test, listener, and E2E tests
-screenshots/              # Existing screenshots captured by your code
-testng.xml                # Suite configuration (listener registered)
-pom.xml                   # Maven + Allure config
-```
+  main/java/pages/        # Page Objects (encapsulate locators & actions)
+  test/java/com/inmotion  # Base test class and E2E test cases
+screenshots/              # Screenshots captured during execution
+testng.xml                # TestNG suite configuration
+pom.xml                   # Maven dependencies & build configuration
 
-## Notes
-- No production logic was changed—only comments were added and Allure hooks were introduced.
-- If you want to disable auto-opening of the report, run:
-  ```bash
-  mvn -DskipAllureServe=true clean test
-  ```
-  Or remove the `allure-maven` execution from `pom.xml`.
+## 📝 Notes
+- Extensive inline comments have been added for clarity.
+- Tests follow TestNG annotations (@BeforeClass, @Test, @AfterClass) to structure execution.
+- This project can be extended with CI/CD pipelines for automated runs.
+
+✅ With this setup, you can confidently run, maintain, and scale UI test automation for InMotion Hosting.
